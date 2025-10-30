@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="id" prefix="og: https://ogp.me/ns#">
-  <!-- Mirrored from hay.galipatstory.id/wendi-irma/?to=Rini by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 09:45:51 GMT -->
+<html lang="id" prefix="og: https://ogp.me/ns#" v-scope>
+  <!-- Mirrored from hay.galipatstory.id/wendi-irma/?to=GUEST_NAME by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 09:45:51 GMT -->
   <!-- Added by HTTrack --><meta
     http-equiv="content-type"
     content="text/html;charset=UTF-8"
@@ -29,7 +29,8 @@
     <title>The Wedding Of Irma &amp; Wendi</title>
     <meta
       name="description"
-      content="Hai Rini, hadiri acara pernikahan Irma &amp; Wendi Pada Minggu, 02 November 2025"
+      content="Hai Tamu Undangan, hadiri acara pernikahan Irma &amp; Wendi Pada Minggu, 02 November 2025"
+      :content="invitationDescription"
     />
     <meta
       name="robots"
@@ -40,7 +41,8 @@
     <meta property="og:title" content="The Wedding Of Irma &amp; Wendi" />
     <meta
       property="og:description"
-      content="Hai Rini, hadiri acara pernikahan Irma &amp; Wendi Pada Minggu, 02 November 2025"
+      content="Hai Tamu Undangan, hadiri acara pernikahan Irma &amp; Wendi Pada Minggu, 02 November 2025"
+      :content="invitationDescription"
     />
     <meta property="og:url" content="https://hay.galipatstory.id/wendi-irma/" />
     <meta property="og:site_name" content="Galipat Story" />
@@ -70,7 +72,8 @@
     <meta name="twitter:title" content="The Wedding Of Irma &amp; Wendi" />
     <meta
       name="twitter:description"
-      content="Hai Rini, hadiri acara pernikahan Irma &amp; Wendi Pada Minggu, 02 November 2025"
+      content="Hai Tamu Undangan, hadiri acara pernikahan Irma &amp; Wendi Pada Minggu, 02 November 2025"
+      :content="invitationDescription"
     />
     <meta
       name="twitter:image"
@@ -142,7 +145,7 @@
               "name": "irmaherdiyani32131"
             },
             "publisher": { "@id": "https://hay.galipatstory.id/#person" },
-            "description": "Hai Rini, hadiri acara pernikahan Irma &amp; Wendi Pada Minggu, 02 November 2025",
+            "description": "Hai __GUEST_NAME__, hadiri acara pernikahan Irma &amp; Wendi Pada Minggu, 02 November 2025",
             "name": "The Wedding Of Irma &amp; Wendi",
             "@id": "https://hay.galipatstory.id/wendi-irma/#richSnippet",
             "isPartOf": {
@@ -1517,7 +1520,7 @@
                                   <h2
                                     class="elementor-heading-title elementor-size-default"
                                   >
-                                    Rini
+                                    {{ guestName }}
                                   </h2>
                                 </div>
                               </div>
@@ -2537,7 +2540,7 @@
                                 <div class="elementor-widget-container">
                                   <div class="elementor-button-wrapper">
                                     <a
-                                      href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=The%20Wedding%20of%20Irma%20%26%20Wendi&amp;details=Rini%2C%20jangan%20lupa%20hadiri%20acara%20kami%20yaa%21&amp;location=Kediaman%20Mempelai%20Wanita&amp;dates=20251102T040000Z%2F20251102T060000Z"
+                                      :href="calendarHref"
                                       class="elementor-button-link elementor-button elementor-size-sm"
                                       target="_blank"
                                       rel="nofollow"
@@ -4042,7 +4045,7 @@
                                         <div class="elementor-widget-container">
                                           <div class="elementor-button-wrapper">
                                             <a
-                                              href="https://api.whatsapp.com/send?phone=62895701268258&amp;text=Hai"
+                                              href="https://api.whatsapp.com/send?phone=6283104225720&amp;text=Hai"
                                               target="_blank"
                                               class="elementor-button-link elementor-button elementor-size-sm"
                                             >
@@ -4385,7 +4388,7 @@
                           <div class="elementor-menu-anchor" id="wishes"></div>
                         </div>
                       </div>
-                      <section
+                      <!-- <section
                         class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-46c42bfd elementor-section-height-min-height elementor-section-full_width elementor-section-height-default"
                         data-eae-slider="19085"
                         data-id="46c42bfd"
@@ -4496,7 +4499,7 @@
                                                     class="saic-input"
                                                     aria-required="true"
                                                     placeholder="Nama Anda"
-                                                    value="Rini"
+                                                    :value="guestName"
                                                   />
                                                   <span class="saic-required"
                                                     >*</span
@@ -4656,7 +4659,7 @@
                             </div>
                           </div>
                         </div>
-                      </section>
+                      </section> -->
                       <section
                         class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-6ada3549 elementor-section-height-min-height wdsdv-enabled--yes elementor-section-full_width elementor-section-height-default"
                         data-eae-slider="78901"
@@ -5578,7 +5581,7 @@
                                 <p>Kepada Yth:</p>
                               </div>
 
-                              <div class="wds-get-name">Rini</div>
+                              <div class="wds-get-name">{{ guestName }}</div>
 
                               <div
                                 id="wds-button-cover"
@@ -5886,7 +5889,7 @@
                   >
                     <div class="elementor-widget-container">
                       <p class="elementor-heading-title elementor-size-default">
-                        Rini
+                        {{ guestName }}
                       </p>
                     </div>
                   </div>
@@ -5918,40 +5921,115 @@
                       id="qr_checkin_560"
                       class="qr_checkin"
                       data-qrid="560"
-                      data-qr='{"width":"180","height":"180","data":"Rini","image":"","colorDot":"#000000","type": "square","colorBg":"#ffffff"}'
+                      data-qr='{"width":"180","height":"180","data":"","image":"","colorDot":"#000000","type": "square","colorBg":"#ffffff"}'
                     ></div>
                     <script type="text/javascript">
                       (() => {
-                        if (
-                          !document
-                            .querySelector("#qr_checkin_560")
-                            .hasChildNodes()
-                        ) {
-                          const dataQR = JSON.parse(
-                            document.querySelector("#qr_checkin_560").dataset.qr
+                        const targetSelector = "#qr_checkin_560";
+                        const DEFAULT_NAME = "";
+
+                        const readConfig = () => {
+                          const target = document.querySelector(targetSelector);
+                          if (!target) {
+                            return null;
+                          }
+                          const fallback = {
+                            width: 180,
+                            height: 180,
+                            data: "",
+                            image: "",
+                            colorDot: "#000000",
+                            type: "square",
+                            colorBg: "#ffffff",
+                          };
+                          try {
+                            const parsed = target.dataset.qr
+                              ? JSON.parse(target.dataset.qr)
+                              : {};
+                            return { ...fallback, ...parsed };
+                          } catch (error) {
+                            console.error("Failed to parse QR dataset", error);
+                            return fallback;
+                          }
+                        };
+
+                        window.renderGuestQr = (name) => {
+                          const target = document.querySelector(targetSelector);
+                          if (
+                            !target ||
+                            typeof QRCodeStyling !== "function" ||
+                            target.hasAttribute("data-qr-rendering")
+                          ) {
+                            return;
+                          }
+                          target.setAttribute("data-qr-rendering", "true");
+
+                          try {
+                            const config = readConfig();
+                            if (!config) {
+                              return;
+                            }
+
+                            const qrName =
+                              name && name.trim()
+                                ? name.trim()
+                                : config.data || DEFAULT_NAME;
+
+                            const qrConfig = {
+                              width: Number(config.width) || 180,
+                              height: Number(config.height) || 180,
+                              data: qrName,
+                              image: config.image,
+                              colorDot: config.colorDot,
+                              type: config.type,
+                              colorBg: config.colorBg,
+                            };
+
+                            target.dataset.qr = JSON.stringify({
+                              width: qrConfig.width,
+                              height: qrConfig.height,
+                              data: qrConfig.data,
+                              image: qrConfig.image,
+                              colorDot: qrConfig.colorDot,
+                              type: qrConfig.type,
+                              colorBg: qrConfig.colorBg,
+                            });
+
+                            target.innerHTML = "";
+                            const qrInstance = new QRCodeStyling({
+                              width: qrConfig.width,
+                              height: qrConfig.height,
+                              type: "svg",
+                              data: qrConfig.data,
+                              image: qrConfig.image,
+                              qrOptions: { errorCorrectionLevel: "H" },
+                              dotsOptions: {
+                                color: qrConfig.colorDot,
+                                type: qrConfig.type,
+                              },
+                              cornersSquareOptions: { type: qrConfig.type },
+                              backgroundOptions: { color: qrConfig.colorBg },
+                              imageOptions: {
+                                imageSize: 0.2,
+                                crossOrigin: "anonymous",
+                                margin: 1,
+                              },
+                            });
+
+                            qrInstance.append(target);
+                          } finally {
+                            target.removeAttribute("data-qr-rendering");
+                          }
+                        };
+
+                        const bootstrap = () => window.renderGuestQr();
+                        if (document.readyState === "loading") {
+                          document.addEventListener(
+                            "DOMContentLoaded",
+                            bootstrap
                           );
-                          const qr_checkin_560 = new QRCodeStyling({
-                            width: dataQR.width,
-                            height: dataQR.height,
-                            type: "svg",
-                            data: dataQR.data,
-                            image: dataQR.image,
-                            qrOptions: { errorCorrectionLevel: "H" },
-                            dotsOptions: {
-                              color: dataQR.colorDot,
-                              type: dataQR.type,
-                            },
-                            cornersSquareOptions: { type: dataQR.type },
-                            backgroundOptions: { color: dataQR.colorBg },
-                            imageOptions: {
-                              imageSize: 0.2,
-                              crossOrigin: "anonymous",
-                              margin: 1,
-                            },
-                          });
-                          qr_checkin_560.append(
-                            document.querySelector("#qr_checkin_560")
-                          );
+                        } else {
+                          bootstrap();
                         }
                       })();
                     </script>
@@ -6092,7 +6170,7 @@ Copyright: © 2025 WeddingPress Team. All rights reserved.
                   ></script>
                 </body>
 
-                <!-- Mirrored from hay.galipatstory.id/wendi-irma/?to=Rini by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 09:45:51 GMT -->
+                <!-- Mirrored from hay.galipatstory.id/wendi-irma/?to=GUEST_NAME by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Oct 2025 09:45:51 GMT -->
               </html>
             </div>
           </div>
@@ -6459,6 +6537,60 @@ Copyright: © 2025 WeddingPress Team. All rights reserved.
             "https:\/\/hay.galipatstory.id\/wp-content\/uploads\/jet-form-builder\/de22152d5dacd095e4ef68a852c2fd6b\/2025\/10\/WhatsApp-Image-2025-10-06-at-10.06.06-682x1024.webp",
         },
       };
+    </script>
+    <script type="module">
+      import { createApp } from "https://unpkg.com/petite-vue?module";
+
+      const DEFAULT_NAME = "";
+      const PARAM_KEYS = ["names", "name", "to"];
+      const searchParams = new URLSearchParams(window.location.search);
+      const rawInput =
+        PARAM_KEYS.map((key) => searchParams.get(key)).find(
+          (value) => typeof value === "string" && value.trim().length
+        ) || "";
+
+      const normalizedInput = rawInput
+        .replace(/[\r\n]+/g, " ")
+        .replace(/[<>"']/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+
+      const guestName =
+        (normalizedInput ? normalizedInput.slice(0, 100).trim() : "") ||
+        DEFAULT_NAME;
+
+      const schemaScript = document.querySelector("script.rank-math-schema");
+      const schemaTemplate = schemaScript ? schemaScript.textContent : "";
+
+      const state = {
+        guestName,
+        get invitationDescription() {
+          return `Hai ${this.guestName}, hadiri acara pernikahan Irma & Wendi Pada Minggu, 02 November 2025`;
+        },
+        get calendarDetails() {
+          return `${this.guestName}, jangan lupa hadiri acara kami yaa!`;
+        },
+        get calendarHref() {
+          const base =
+            "https://www.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Irma%20%26%20Wendi&location=Kediaman%20Mempelai%20Wanita&dates=20251102T040000Z%2F20251102T060000Z";
+          return `${base}&details=${encodeURIComponent(this.calendarDetails)}`;
+        },
+        init() {
+          if (schemaScript && schemaTemplate) {
+            schemaScript.textContent = schemaTemplate.replace(
+              /__GUEST_NAME__/g,
+              this.guestName
+            );
+          }
+
+          if (typeof window.renderGuestQr === "function") {
+            window.renderGuestQr(this.guestName);
+          }
+        },
+      };
+
+      createApp(state).mount();
+      state.init();
     </script>
     <script
       src="https://hay.galipatstory.id/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.31.2"
